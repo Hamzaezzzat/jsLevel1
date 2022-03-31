@@ -186,3 +186,9 @@ footer {
 p{
   margin-bottom: 0;
 }
+.bc{
+  background-color: green;
+}
+.mb{
+  margin-bottom: 50px;
+}
