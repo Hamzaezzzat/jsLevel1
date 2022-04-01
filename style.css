@@ -192,3 +192,43 @@ p{
 .mb{
   margin-bottom: 50px;
 }
+
+
+
+/* Position Fixed */
+/* 
+header {
+background-color:#3d4a59;
+position: fixed;
+right: 0;
+left: 0;
+bottom: 0;
+top: 0;
+}
+ */
+
+/* Popup Style */
+.popup{
+  background-color: #3d4a5986;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.popup div{
+  margin: 100px;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #ff8a00;
+}
+.popup div h1{
+  padding: 20px;
+  font-size: 20px;
+}
+.active{
+  display: block;
+}
