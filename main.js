@@ -6,6 +6,8 @@ const newTitle2 = document.createElement("h1");
 newTitle2.innerText = ("اتعلم في ساعة")
 const popup = document.querySelector(".popup");
 const buttonPopup = document.getElementById("buttonPopup");
+const mode = document.getElementsByClassName("mode")[0];
+const dark = document.getElementsByClassName("dark")[0];
 
 buy.addEventListener("click", (eo)=>{
   eo.preventDefault();
@@ -15,6 +17,12 @@ buy.addEventListener("click", (eo)=>{
 buttonPopup.addEventListener("click",(eo)=>{
   eo.preventDefault();
   buttonPopup.toggle("active")
+})
+
+
+// Start Dark mode
+mode.addEventListener("click",(eo)=>{
+  dark.classList.toggle("dark");
 })
 
 // Acting with <dialog>

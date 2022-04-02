@@ -11,6 +11,9 @@ header {
   color: white;
   border-radius: 0 0 70px 70px;
 }
+.dark header{
+  background-color: #e3043f;
+}
 
 header h1 {
   margin-bottom: 25px;
