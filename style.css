@@ -5,6 +5,7 @@
   font-family: sans-serif;
 }
 
+
 :root {
   --primary-color: #302AE6;
   --secondary-color: #536390;
@@ -19,7 +20,13 @@
   --bg-color: #161625;
   --heading-color: #818cab;
 }
+.dark   {
+  background-color: #161625 ;
+  color:#e1e1ff;
 
+}
+.dark main{
+}
 header {
   margin-bottom: 100px;
 
@@ -28,7 +35,7 @@ header {
   border-radius: 0 0 70px 70px;
 }
 .dark header{
-  background-color: #180A0A;
+  background-color: #9A97F3;
 }
 
 header h1 {
@@ -48,16 +55,23 @@ header h1 {
   margin-top: 6px;
   display: inline-block;
 }
+.dark .parent li a {color:#161625}
 
 .parent li a:hover {
   border-bottom: 2px solid red;
   font-size: 20px;
 }
+.dark .parent li a:hover {color:#6d6ab0}
 
 .mode {
   border: 2px solid white;
   border-radius: 10px;
   padding: 5px 10px;
+  cursor: pointer;
+}
+.dark .mode{
+  border: 2px solid #161625;
+  color: #161625;
 }
 
 li {
@@ -79,6 +93,10 @@ h1 {
 
   padding: 15px;
 }
+.dark h1{
+  background-color:#9A97F3;
+  color:#161625;
+}
 
 section {
   margin-bottom: 100px;
@@ -90,6 +108,10 @@ section {
   border-radius: 13px;
 
   padding: 45px 0;
+}
+.dark section{
+  box-shadow: 5px 5px 25px #9A97F3;
+
 }
 
 .left-section,
@@ -167,6 +189,10 @@ footer {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
 }
+.dark .design{
+  background-color: #161625;
+  border-color: #9A97F3;
+}
 
 .follow {
   box-shadow: 0 5px 30px 0 rgb(0 0 0 / 25%);
@@ -178,6 +204,10 @@ footer {
 
   opacity: 0.9;
   width: 99%;
+}
+.dark .follow{
+  border-top: 6px solid #9A97F3;
+
 }
 
 .follow a {
@@ -201,12 +231,12 @@ footer {
   margin-right: auto;
   border-radius: 20px;
 }
+.dark .card p,.dark .card h5{
+  color:#161625
+}
 
 p{
   margin-bottom: 0;
-}
-.bc{
-  background-color: green;
 }
 .mb{
   margin-bottom: 50px;
@@ -214,17 +244,6 @@ p{
 
 
 
-/* Position Fixed */
-/* 
-header {
-background-color:#3d4a59;
-position: fixed;
-right: 0;
-left: 0;
-bottom: 0;
-top: 0;
-}
- */
 
 /* Popup Style */
 .popup,.popup2{
@@ -244,10 +263,23 @@ top: 0;
   border-radius: 20px;
   background-color: #ff8a00;
 }
+.dark .popup div,.dark .popup2 div{
+  border: 1px solid #9A97F3;
+  border-radius: 20px;
+  background-color: #6d6ab0;
+}
 .popup div h1,.popup2 div h1{
   padding: 20px;
   font-size: 20px;
 }
 .active{
   display: block;
+}
+.items{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.items .card{
+  margin: 15px;
 }

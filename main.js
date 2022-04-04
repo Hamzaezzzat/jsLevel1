@@ -9,21 +9,36 @@ const popup2 = document.querySelector(".popup2");
 const buttonPopup = document.getElementById("buttonPopup");
 
 
+/*
+// This code used for one item 
 buy.addEventListener("click", (eo)=>{
   eo.preventDefault();
   // favDialog.showModal();
   popup.classList.toggle("active");
 })
 
-setTimeout(buttonPopup.addEventListener("click",(eo) =>{
-  eo.preventDefault();
-  popup2.classList.toggle("active");
-}), 6000);
+*/
 
-// buttonPopup.addEventListener("click",(eo)=>{
-//   eo.preventDefault();
-//   buttonPopup.toggle("active")
-// })
+
+// To Call all the items
+const buyNow = document.querySelectorAll(".buy");
+
+buyNow.forEach((item)=>{
+  item.addEventListener("click", (eo)=>{
+    popup.classList.add("active");
+  })
+})
+buttonPopup.addEventListener("click",(eo)=>{
+  eo.preventDefault();
+  popup2.classList.add("active")
+  
+  setTimeout(() =>{
+    popup.classList.remove("active");
+    popup2.classList.remove("active");
+  }, 3000);
+})
+
+
 
 
 // Start Dark mode
@@ -35,8 +50,9 @@ mode.addEventListener("click",(eo)=>{
 })
 
 
+
 /*
-// Data Types
+// ====================== Data Types ======================
 const data1 = "String";//String
 const data2 = 20;     // Number
 const data3 = 20.3;   // Number
@@ -47,7 +63,7 @@ console.log(typeof(data1));
 */
 
 /*
-// array
+// // ====================== Array ======================
 const array = [1,2,3,4,"HTML","CSS","Javascript"];
 console.log(array[2]); // 3
 console.log(array[4]); // HTML
@@ -58,14 +74,41 @@ console.log(array.indexOf(5)); // CSS
 */
 
 
+/*
+// ====================== Array Methods ======================
+const h1 = document.getElementsByTagName("h1");
+console.log(h1); // HTMLCollection (4)
+// array.from(<array>);
+const h1Array = Array.from(h1); // []
+console.log(h1Array); // HTMLCollection (4)
+
+// <array>.forEach(callbackfunction);
+h1Array.forEach((item)=>{
+  item.style.background="black";
+  item.style.color = "red";
+  h1Array[2].style.border = "12px solid green";
+})
+*/
+
+/* ====================== Selectors ======================
+document.getElementById()         // Element
+document.getElementsByClassName() // HTML Collection
+document.getElementsByTagName()   // HTML Collection
+document.querySelector()          // Element
+document.querySelectorAll()       // Node List = Array / But HTML Collection need array.from() first
+*/
+const hs = document.querySelectorAll("h1");
+hs.forEach((item)=>{
+
+})
 
 
-// Acting with <dialog>
+
+
 
 /*
-
-// to lecture 8
-// alot types of events
+// ====================== <dialog> ======================
+// to lecture 8 | alot types of events
 buy.addEventListener("click",(eo)=>{
   eo.preventDefault();
   
@@ -77,7 +120,6 @@ buy.addEventListener("click",(eo)=>{
   mydiv.append(newTitle2);
   newTitle2.classList.add("mb");
 })
-
 buy.addEventListener("click",(eo)=>{
   eo.target.innerText ="Hello Wolrd";
 })
