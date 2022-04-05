@@ -20,23 +20,7 @@ buy.addEventListener("click", (eo)=>{
 */
 
 
-// To Call all the items
-const buyNow = document.querySelectorAll(".buy");
 
-buyNow.forEach((item)=>{
-  item.addEventListener("click", (eo)=>{
-    popup.classList.add("active");
-  })
-})
-buttonPopup.addEventListener("click",(eo)=>{
-  eo.preventDefault();
-  popup2.classList.add("active")
-  
-  setTimeout(() =>{
-    popup.classList.remove("active");
-    popup2.classList.remove("active");
-  }, 3000);
-})
 
 
 
@@ -103,8 +87,38 @@ hs.forEach((item)=>{
 })
 
 
+// ====================== Add Product ======================
+const items = document.querySelector(".items");
 
+addProduct.addEventListener("click",eo=>{
+const addproduct = `
+<div class="card my-card" style="width: 18rem;">
+          <img src="/img/profile.png" style="border-radius: 20px;" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" id="buy" class="buy btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+`
+  items.innerHTML += addproduct;
+})
 
+// ====================== eo.target ======================
+const buyNow = document.querySelectorAll(".buy");
+items.addEventListener("click",eo=>{
+  if (eo.target.classList == "buy btn btn-primary") {
+    popup.classList.add("active");
+  }
+})
+buttonPopup.addEventListener("click",(eo)=>{
+  eo.preventDefault();
+  popup2.classList.add("active")
+  setTimeout(() =>{
+    popup.classList.remove("active");
+    popup2.classList.remove("active");
+  }, 3000);
+})
 
 /*
 // ====================== <dialog> ======================
